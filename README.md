@@ -43,5 +43,5 @@ The use of the Matlab codes and files are given below:
 * `oregon_networks.mat`: pre-processed data along with communities for SNAP Oregon dataset
 * `seizure.csv`: contains data for the Epileptic seizures
 * `TW_beta1_CDF.mat`: table of values for Tracy-Widom distribution function
-results = folder where all results will be saved
+* `results`: folder where all results will be saved
 
