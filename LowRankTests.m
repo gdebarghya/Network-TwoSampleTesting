@@ -1,5 +1,19 @@
 function [tASE,tAdj,pvalASE,pvalAdj] = LowRankTests(A,B,r,sig,bs)
 
+% Returns acceptance/rejection for bootstrapped tests Boot-ASE (arXiv:1403.7249), Boot-EPA (statistic from arXiv:1606.02401)
+% Note: 
+% All graphs are assumed to unweighted, undirected, and defined on a common vertex set. 
+% Only the first network from each population is tested
+%
+% Input:
+% A: cell array containing network in 1st population; each cell is a sparse adjacency matrix
+% B: cell array containing network in 2nd population, each cell being a sparse adjacency matrix
+% r = scalar specifying rank of population adjacency
+% sig: significance level for acceptance of null hypothesis
+%
+% Output:
+% test: 1 if null is rejected, 0 otherwise
+% pval: p-value for the test
 
 testStat = computeStat(A{1},B{1},r);
 
