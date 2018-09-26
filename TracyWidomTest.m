@@ -1,8 +1,19 @@
 function [test,pval] = TracyWidomTest(A,B,r,sig)
 
-% A,B = two cell arrays, each containing a large sparse matrix (both of same size)
-% r = number of communities or can be a vector with all community labels
-% sig = significance level
+% Returns acceptance/rejection for the proposed Tracy-Widom based test (Asymp-TW)
+% Note: 
+% All graphs are assumed to unweighted, undirected, and defined on a common vertex set. 
+% Only the first network from each population is tested
+%
+% Input:
+% A: cell array containing network in 1st population; each cell is a sparse adjacency matrix
+% B: cell array containing network in 2nd population, each cell being a sparse adjacency matrix
+% r = scalar (specifying number of communities) or vector (specfying community labels of all nodes)
+% sig: significance level for acceptance of null hypothesis
+%
+% Output:
+% test: 1 if null is rejected, 0 otherwise
+% pval: p-value for the test
 
 n = size(A{1},1);
 
