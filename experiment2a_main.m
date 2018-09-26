@@ -1,6 +1,11 @@
 function experiment2a_main (trial)
-
+% Runs experiments for the paper
+% Input:
 % trial = number of independent runs (we use trial = 1000)
+%
+% Output (saved in mat file):
+% Test power (percentage of rejections) for different tests
+
 n_all = 100:100:1000; % number of vertices
 bs = 200; % number of bootstrap samples generated
 sig = 0.05; % significance level
