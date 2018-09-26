@@ -1,8 +1,20 @@
 function [tFro,tOp,pvalFro,pvalOp] = ShufflingTests(A,B,sig,bs)
 
-% permutation based bootstrapped variants of tests in arxiv 1707.00833
-% assumes A, B are defined as a cell array of length m, each cell being an
-% adjacency matrix (stored as a sparse matrix)
+% Permutation based bootstrapped variants of tests in arxiv 1707.00833 (Boot-Frobenius and Boot-Spectral)
+% Note: 
+% All graphs are assumed to unweighted, undirected, and defined on a common vertex set. 
+% Sample size in each population must be at least 2 
+%
+% Input:
+% A: cell array containing networks in 1st population; each cell is a sparse adjacency matrix
+% B: cell array containing networks in 2nd population, each cell being a sparse adjacency matrix
+% sig: significance level for acceptance of null hypothesis
+%
+% Output:
+% tFro: output of Boot-Frobenius test (1 if null is rejected, 0 otherwise)
+% tOp: output of Boot-Spectral test (1 if null is rejected, 0 otherwise)
+% pvalFro: p-value for Boot-Frobenius test
+% pvaOP: p-value for Boot-Spectral test
 
 m = min(length(A),length(B));
 C = cat(1,A,B); 
