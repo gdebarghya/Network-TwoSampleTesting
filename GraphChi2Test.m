@@ -1,8 +1,16 @@
 function [test,pval] = GraphChi2Test(A,B,sig)
 
-% returns acceptance/rejection for a chi2-type test
-% assumes A, B are defined as a cell array of length m, each cell being an
-% adjacency matrix (stored as a sparse matrix)
+% Returns acceptance/rejection for a chi2-type test (AsympChi2)
+% Note: All graphs are assumed to unweighted, undirected, and defined on a common vertex set
+%
+% Input:
+% A: cell array containing networks in 1st population; each cell is a sparse adjacency matrix
+% B: cell array containing networks in 2nd population, each cell being a sparse adjacency matrix
+% sig: significance level for acceptance of null hypothesis
+%
+% Output:
+% test: 1 if null is rejected, 0 otherwise
+% pval: p-value for the test
 
 mA = length(A); mB = length(B);
 n = size(A{1},1); 
