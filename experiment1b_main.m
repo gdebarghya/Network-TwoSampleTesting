@@ -1,4 +1,10 @@
 function experiment1b_main (trial)
+% Runs experiments for the paper
+% Input:
+% trial = number of independent runs (we use trial = 1000)
+%
+% Output (saved in mat file):
+% Test power (percentage of rejections) for different tests
 
 % trial = number of independent runs (we use trial = 1000)
 n = 500; % number of vertices
