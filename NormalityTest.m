@@ -1,8 +1,18 @@
 function [test,pval] = NormalityTest(A,B,sig)
 
-% returns acceptance/rejection for proposed Frobenius norm based test
-% assumes A, B are defined as a cell array of length m, each cell being an
-% adjacency matrix (stored as a sparse matrix)
+% Returns acceptance/rejection for the proposed normality based test (Asymp-Normal)
+% Note: 
+% All graphs are assumed to unweighted, undirected, and defined on a common vertex set. 
+% Sample size in each population must be at least 2 
+%
+% Input:
+% A: cell array containing networks in 1st population; each cell is a sparse adjacency matrix
+% B: cell array containing networks in 2nd population, each cell being a sparse adjacency matrix
+% sig: significance level for acceptance of null hypothesis
+%
+% Output:
+% test: 1 if null is rejected, 0 otherwise
+% pval: p-value for the test
 
 m1 = floor(0.5*min(length(A),length(B)));
 n = size(A{1},1);
