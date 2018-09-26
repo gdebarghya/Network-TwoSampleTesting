@@ -1,6 +1,11 @@
 function experiment1a_main (trial)
-
+% Runs the experiments for Figure 1 in the paper
+% Input:
 % trial = number of independent runs (we use trial = 1000)
+%
+% Output (saved in mat file):
+% Test power (percentage of rejections) for Boot-Frobenius, Boot-Spectral, Asymp-Normal, Asymp-Chi2
+
 n_all = 100:100:1000; % number of vertices
 m_all = [2 4]; % sample size
 bs = 200; % number of bootstrap samples generated
