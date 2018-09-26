@@ -6,7 +6,6 @@ function experiment1b_main (trial)
 % Output (saved in mat file):
 % Test power (percentage of rejections) for different tests
 
-% trial = number of independent runs (we use trial = 1000)
 n = 500; % number of vertices
 m_all = 2:2:10; % sample size
 rho_all = [0.25 0.5 1 2 4]; % controls sparsity of graphs
