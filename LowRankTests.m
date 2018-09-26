@@ -12,8 +12,10 @@ function [tASE,tAdj,pvalASE,pvalAdj] = LowRankTests(A,B,r,sig,bs)
 % sig: significance level for acceptance of null hypothesis
 %
 % Output:
-% test: 1 if null is rejected, 0 otherwise
-% pval: p-value for the test
+% tASE: output of Boot-ASE test (1 if null is rejected, 0 otherwise)
+% tAdj: output of Boot-EPA test (1 if null is rejected, 0 otherwise)
+% pvalASE: p-value for Boot-ASE test
+% pvalAdj: p-value for Boot-EPA test
 
 testStat = computeStat(A{1},B{1},r);
 
