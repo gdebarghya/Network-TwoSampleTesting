@@ -2,7 +2,7 @@
 MATLAB implementations for two sample hypothesis tests for networks
 
 The codes implements the methods in the paper:
-- D. Ghoshdastidar and U. von Luxburg. Practical Methods for Graph Two-Sample Testing. In *Advances in Neural Information Processing Systems (NIPS)*, 2018
+- D. Ghoshdastidar and U. von Luxburg. Practical Methods for Graph Two-Sample Testing. In *Advances in Neural Information Processing Systems (NIPS)*, 2018 [PDF (including Appendix)](./NIPS2018Paper-WithSupplementary.pdf)
 
 Please cite this paper if you use these codes/results in your work.
 
